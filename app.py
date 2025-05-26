@@ -28,8 +28,7 @@ try:
         author VARCHAR(255),
         date DATE,
         content TEXT
-    );
-    '''
+    );'''
     cursor.execute(create_messages_table)
 
     # Create categories table if not exists
@@ -39,8 +38,7 @@ try:
         message_id INT,
         category_name VARCHAR(255),
         FOREIGN KEY (message_id) REFERENCES messages(id) ON DELETE CASCADE
-    );
-    '''
+    );'''
     cursor.execute(create_categories_table)
 
     # Insert data into messages table
